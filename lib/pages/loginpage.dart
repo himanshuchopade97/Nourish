@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nourish/pages/dashboard.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -43,13 +44,14 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
 
-                    SizedBox(height: 135,),
-                    // Email Field
+                    const SizedBox(height: 135,),
+
+                    // Username Field
                     TextField(
                       decoration: InputDecoration(
-                        labelText: 'Email Address',
+                        labelText: 'Username',
                         labelStyle: const TextStyle(color: Colors.white),
-                        hintText: 'Email',
+                        hintText: 'Username',
                         hintStyle: const TextStyle(color: Colors.white54),
                         filled: true,
                         fillColor: Colors.black.withOpacity(0.2),
@@ -107,7 +109,10 @@ class _LoginPageState extends State<LoginPage> {
                     // Submit Button
                     ElevatedButton(
                       onPressed: () {
-                        // Handle submit action
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const DashboardPage()),
+                          );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,

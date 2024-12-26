@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nourish/pages/dashboard.dart';
 import 'package:nourish/pages/homepage.dart';
+import 'package:nourish/pages/loginpage.dart';
 
 void main() async {
 
